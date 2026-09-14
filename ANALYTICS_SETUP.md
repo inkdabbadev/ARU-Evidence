@@ -4,11 +4,23 @@ The site remains usable with no Supabase configuration. `/admin` displays setup 
 
 ## Connect later
 
-1. Create a Supabase project. Run `supabase/migrations/202609140001_journey.sql` in its SQL editor (once), or apply it through the Supabase CLI migrations workflow.
+1. Create a Supabase project. Run `supabase/migrations/202609140001_journey.sql` in its SQL editor (once), then `supabase/migrations/202609140002_journey_validation.sql`. If the tables already exist from the original migration, run **only the second migration**. Alternatively, apply pending migrations through the Supabase CLI migrations workflow. The second migration preserves existing data and replaces the visitor RPC with stricter validation.
 2. Under Authentication, enable **anonymous sign-ins** for visitors. Create your admin user using the Supabase dashboard with an email and strong password. Disable public email sign-ups if you do not need them.
 3. Copy that admin user's UUID from Authentication > Users. Run `insert into public.journey_admins(user_id) values ('ADMIN-USER-UUID');` in the SQL editor. No browser account can add itself to this allowlist.
 4. Copy `.env.example` to `.env.local`, fill the project URL and **publishable** key, and restart Vite. Add those same two environment variables to Vercel and redeploy for production. Never use a service-role or secret key in a `VITE_` variable.
 5. Open `/admin` and sign in. Open the microsite in a separate browser/private window and navigate, open a book, and attempt a puzzle. Confirm the route/feed update. Leave the visitor untouched for 60 seconds (Idle); close it and wait up to 90 seconds (Disconnected). After 30 minutes without a report, its unfinished current station becomes Abandoned.
+
+Run `npm run check:supabase` after configuring `.env.local`. It checks the actual project without creating users or sessions. If it reports that anonymous sign-ins are disabled, enable **Anonymous Sign-Ins** under Authentication in the Supabase dashboard. SQL cannot enable this Auth setting. The browser's public key cannot apply migrations or add an admin; use the project's SQL editor for those steps.
+
+The live dashboard requires both an email/password admin account and its UUID in `journey_admins`. If the account already exists, the allowlist query can safely be repeated:
+
+```sql
+insert into public.journey_admins(user_id)
+values ('ADMIN-USER-UUID')
+on conflict (user_id) do nothing;
+```
+
+Do not substitute a visitor's anonymous user UUID. After login, the dashboard should show **Realtime connected**; it also polls every 30 seconds while reconnecting. A successful public readiness check does not prove that the admin allowlist or Realtime publication is configured.
 
 ## Access and data
 
@@ -22,6 +34,6 @@ Stations live in `src/analytics/config.ts`. Instrument with `trackEvent` from `s
 
 ## Verification before production
 
-Run `npm run build`, `npm run lint`, and `npm run test:analytics`. Run `supabase/tests/journey_access.sql` in a development project SQL editor after applying the migration; it verifies visitor isolation, ownership and admin reads with rolled-back fixtures. With your connected project, check: signed-out and non-allowlisted users cannot read either table; an anonymous user's RPC cannot update a different owner's UUID; allowlisted admins can see Realtime; refresh preserves the visit; completion and book/puzzle events match the actual UI. Local tests cannot prove a migration has been applied to your remote project.
+Run `npm run build`, `npm run lint`, `npm run test:analytics`, and `npm run test:supabase`. The SQL test uses PGlite (embedded PostgreSQL) to execute both migrations and the access checks with a minimal Supabase Auth schema; it does not emulate the hosted Auth service or WebSocket delivery. Run `supabase/tests/journey_access.sql` in a development project SQL editor after applying both migrations; it verifies visitor isolation, ownership, admin reads, malformed payload rejection, event retry deduplication, transactional rollback and disconnect/resume with rolled-back fixtures. With your connected project, check: signed-out and non-allowlisted users cannot read either table; an anonymous user's RPC cannot update a different owner's UUID; allowlisted admins can see Realtime; refresh preserves the visit; completion and book/puzzle events match the actual UI. Local tests cannot prove a migration has been applied to your remote project.
 
 References: [Anonymous Auth](https://supabase.com/docs/guides/auth/auth-anonymous), [row-level security](https://supabase.com/docs/guides/database/postgres/row-level-security), [Realtime Postgres Changes](https://supabase.com/docs/guides/realtime/postgres-changes).

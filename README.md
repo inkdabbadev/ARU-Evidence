@@ -25,4 +25,4 @@ Open `/admin` directly. A clearly labeled fictional dashboard preview is availab
 - `public/`: supplied artwork, music and other static assets
 - `supabase/`: database migration and access checks
 
-Run `npm run test:evidence`, `npm run test:analytics`, and `npm run lint` for checks.
+Run `npm run test:evidence`, `npm run test:analytics`, `npm run test:supabase`, and `npm run lint` for checks. Run `npm run check:supabase` to check the configured live project's public endpoints and anonymous sign-in setting.
