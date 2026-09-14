@@ -1,0 +1,49 @@
+﻿.nothing-scene {position:relative;isolation:isolate;height:100svh;min-height:420px;overflow:hidden;background:#06090e;color:#d7d9d7;font-family:var(--font-body)}
+.nothing-intro {position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.nothing-intro>span {font:10px var(--font-type);letter-spacing:.18em;color:#9b9f9f}.nothing-intro h1 {font:400 clamp(34px,5vw,58px) var(--font-display);letter-spacing:.02em;margin:22px 0 12px}.nothing-intro p {font:italic 15px var(--font-display);color:#9caaa9;margin-bottom:30px}
+.nothing-scene button {background:transparent;color:#bfc8c5;border:0;border-bottom:1px solid #a2ada74a;padding:12px 17px;min-height:44px;font:13px var(--font-body);cursor:pointer;transition:color .4s,border-color .4s}.nothing-scene button:hover {color:#f0f1e8;border-color:#f0f1e880}.nothing-scene button:focus-visible {outline:1px solid #c1cec6;outline-offset:5px}
+.night-environment {position:absolute;inset:0;background:linear-gradient(#05080e 0%,#0a111a 68%,#151c23 87%,#0b1015 100%);animation:night-arrive 2.5s ease both}.night-canvas {width:100%;height:100%;position:absolute;inset:0}
+.nothing-instruction,.nothing-response,.nothing-line {position:absolute;pointer-events:none;text-align:center;left:8%;right:8%;transition:opacity 1.2s ease;color:#bbc3c3}.nothing-instruction {top:12%;font:10px var(--font-type);letter-spacing:.13em}.nothing-response {top:22%;font:13px var(--font-display);transition:opacity .35s}.nothing-line {top:47%;font:300 clamp(20px,2.4vw,32px)/1.5 var(--font-display);color:#d0d8d4}.nothing-tiny {font-size:13px}.nothing-hidden {opacity:0!important}.nothing-choices {position:absolute;bottom:10%;left:0;right:0;display:flex;justify-content:center;gap:35px;z-index:3}.nothing-choices button {font-size:12px}
+.night-piece-copy {position:absolute;top:calc(40% - 28px);left:0;right:0;text-align:center;pointer-events:none}.night-piece-copy h2 {font:300 38px var(--font-display);letter-spacing:.15em;margin:0;transition:opacity 2s}.night-piece-copy p {font:10px/1.9 var(--font-type);letter-spacing:.12em;margin-top:150px;transition:opacity 1.8s}.night-piece-copy button {pointer-events:auto;margin-top:24px;font-size:12px}
+@keyframes night-arrive {from{opacity:0}to{opacity:1}}
+@media(max-width:650px){.nothing-choices {bottom:17%;gap:18px}.nothing-choices button {font-size:11px;padding:12px 10px}.night-piece-copy h2 {font-size:30px}.night-piece-copy p {margin-top:115px}.nothing-line {top:43%;font-size:22px}.nothing-tiny {font-size:13px}}
+@media(prefers-reduced-motion:reduce){.night-environment{animation:none}}
+.night-piece-copy h2{transition:opacity 1.5s,letter-spacing 1.5s,filter 1.5s;letter-spacing:.22em}.night-piece-copy h2.nothing-hidden{filter:blur(5px);letter-spacing:.12em}.night-departing .night-canvas{transform:scale(1.9);transform-origin:50% 40%;transition:transform 1.3s ease-in}.night-departing::after{content:"";position:absolute;inset:0;background:#d6cdb9;z-index:5;animation:paper-dissolve 1.3s forwards;pointer-events:none}@keyframes paper-dissolve{from{opacity:0}to{opacity:1}}
+
+/* Unobstructed night sky. */
+
+
+.nothing-line {top:20%;left:18%;right:18%}
+.nothing-response {top:15%;left:18%;right:24%}
+.nothing-instruction {top:8%}
+.nothing-choices {top:30%;bottom:auto}
+.night-piece-copy {top:calc(21% - 24px)}
+.night-piece-copy h2 {font-size:clamp(24px,3vw,38px)}
+.night-piece-copy p {margin-top:clamp(45px,8vh,85px)}
+.night-piece-copy button {margin-top:12px}
+
+.night-departing .night-canvas {transform-origin:50% 21%}
+@media(max-aspect-ratio:4/3){
+  
+  .nothing-line {top:25%;left:10%;right:10%}
+  .nothing-choices {top:40%;bottom:auto}
+  .night-piece-copy {top:calc(25% - 24px)}
+  .night-departing .night-canvas {transform-origin:50% 25%}
+}
+@media(prefers-reduced-motion:reduce){
+  .night-departing .night-canvas {transform:none}
+  .night-piece-copy h2 {filter:none!important;letter-spacing:.22em!important}
+}
+
+/* Let only the scene and music remain during the final recovery. */
+body:has(.nothing-piece) .fixed:has(>button[aria-label="Menu"]) {visibility:hidden;pointer-events:none}
+
+.night-piece-copy p {margin-top:20px}
+.night-piece-copy button {display:block;margin:clamp(42px,6vh,65px) auto 0}
+
+/* Match the canvas formation size and anchor on every screen. */
+.nothing-scene {--night-piece-size:min(80vw,58svh,470px)}
+.night-piece-copy {top:50%;height:0;left:0;right:0}
+.night-piece-copy h2 {position:absolute;top:0;left:50%;transform:translate(-50%,-50%);line-height:1;margin:0;padding-left:.22em;white-space:nowrap}
+.night-piece-copy p {position:absolute;top:calc(var(--night-piece-size) * .3 + 24px);left:0;right:0;margin:0;line-height:1.9}
+.night-piece-copy button {position:absolute;top:calc(var(--night-piece-size) * .3 + 84px);left:50%;transform:translateX(-50%);margin:0;white-space:nowrap}
+.night-departing .night-canvas {transform-origin:50% 50%}

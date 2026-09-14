@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#eee4cb"/><stop offset="1" stop-color="#cfb68e"/></linearGradient>
+    <linearGradient id="sun" x2="0" y2="1"><stop stop-color="#dc7150"/><stop offset="1" stop-color="#a7392e"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+  </defs>
+  <g filter="url(#grain)">
+    <path fill="url(#sky)" d="M0 0h600v400H0z"/>
+    <circle cx="300" cy="167" r="112" fill="url(#sun)"/>
+    <g fill="none" stroke="#f1dbb8" stroke-width="2" opacity=".45"><path d="M193 172h214M197 186h206M207 202h186M220 219h160M240 238h120"/></g>
+    <path d="M0 222Q70 184 155 210T322 226T460 209T600 220V400H0Z" fill="#6c6e5b"/>
+    <path d="M0 251Q100 228 192 255T371 245T600 258V400H0Z" fill="#444c40"/>
+    <path d="M0 291Q117 271 264 290T600 280V400H0Z" fill="#272e29"/>
+    <path d="M0 350Q160 326 303 350T600 339V400H0Z" fill="#1a2421"/>
+    <g fill="none" stroke="#293b32" stroke-linecap="round"><path d="M41 280Q57 168 29 78M47 211Q85 178 99 128M39 150Q14 137 0 119" stroke-width="6"/><path d="M557 272Q542 172 576 99M553 213Q522 193 505 145" stroke-width="5"/></g>
+    <g fill="#394d3e"><ellipse cx="32" cy="94" rx="18" ry="44" transform="rotate(-24 32 94)"/><ellipse cx="77" cy="155" rx="15" ry="38" transform="rotate(33 77 155)"/><ellipse cx="20" cy="148" rx="13" ry="33" transform="rotate(-47 20 148)"/><ellipse cx="570" cy="117" rx="17" ry="42" transform="rotate(25 570 117)"/><ellipse cx="531" cy="180" rx="14" ry="33" transform="rotate(-37 531 180)"/></g>
+    <g fill="none" stroke="#e8d6b4" stroke-width="6" stroke-linejoin="round">
+      <path d="M163 255l65 8-9 65-66-8zM153 320l-8 46M219 328l8 41M173 259l-7 62M190 261l-7 62M207 263l-7 62"/>
+      <path d="M371 263l65-8 10 65-66 8zM380 328l-7 41M446 320l8 46M391 263l9 61M409 260l9 62M426 258l9 62"/>
+      <path d="M153 320l72-1M375 319l72 1" stroke-width="9"/>
+    </g>
+    <ellipse cx="300" cy="308" rx="48" ry="10" fill="#b38d65"/>
+    <path d="M300 316v47M283 366l17-8 17 8" stroke="#c6ab83" stroke-width="5" fill="none"/>
+    <g fill="#f2dfb9" stroke="#f2dfb9" stroke-width="2"><path d="M278 291h15l-2 12h-11zM310 291h15l-2 12h-11z"/><path d="M293 293q9-1 6 6h-7M325 293q9-1 6 6h-7" fill="none"/></g>
+    <g fill="none" stroke="#ebd4ad" stroke-width="1.4" opacity=".7"><path d="M285 285q-6-6 0-11t0-10M316 285q-6-6 0-11t0-10"/></g>
+    <g fill="#f4e6c9"><path d="M122 308l2-5 2 5-2 5zM482 300l2-5 2 5-2 5zM248 341l2-4 2 4-2 4zM355 348l2-4 2 4-2 4z"/></g>
+    <text x="300" y="45" fill="#403c30" text-anchor="middle" font-family="Georgia,serif" font-size="11" letter-spacing="4">THE THINGS WE MAKE ROOM FOR</text>
+    <text x="300" y="148" fill="#f5e8cc" text-anchor="middle" font-family="Georgia,serif" font-size="73" letter-spacing="13">TIME</text>
+    <text x="300" y="181" fill="#f4d6b4" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="17">a little while, together.</text>
+    <text x="300" y="387" fill="#b6b69c" text-anchor="middle" font-family="monospace" font-size="8" letter-spacing="3">CASE #2711 · NO WORK. NO AGENDA. JUST US.</text>
+  </g>
+</svg>

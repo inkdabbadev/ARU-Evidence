@@ -1,0 +1,652 @@
+{
+  "the-1000-piece-problem": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 12_57_49 AM.png",
+    "sourceAspect": 1.5,
+    "coverCrop": {
+      "left": 0.126,
+      "top": 0.046,
+      "width": 0.466,
+      "height": 0.902
+    },
+    "spineCrop": {
+      "left": 0.789,
+      "top": 0.043,
+      "width": 0.076,
+      "height": 0.906
+    }
+  },
+  "10739-things": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 09_05_31 AM.png",
+    "sourceAspect": 1.0,
+    "coverCrop": {
+      "left": 0.139,
+      "top": 0.1,
+      "width": 0.678,
+      "height": 0.819
+    },
+    "spineCrop": {
+      "left": 0.081,
+      "top": 0.1,
+      "width": 0.058,
+      "height": 0.819
+    }
+  },
+  "things-i-ll-tell-you-later": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_00_49 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.169,
+      "top": 0.044,
+      "width": 0.477,
+      "height": 0.899
+    },
+    "spineCrop": {
+      "left": 0.741,
+      "top": 0.04,
+      "width": 0.084,
+      "height": 0.901
+    }
+  },
+  "random-aaru-updates-vol-i": {
+    "image": "books/random-aaru-updates-vol-i.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "the-comic-strip-flight": {
+    "image": "books/the-comic-strip-flight.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "firm-foundation-coffee-guide": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_02_47 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.168,
+      "top": 0.03,
+      "width": 0.498,
+      "height": 0.932
+    },
+    "spineCrop": {
+      "left": 0.729,
+      "top": 0.025,
+      "width": 0.107,
+      "height": 0.935
+    }
+  },
+  "house-arrest": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_09_42 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.148,
+      "top": 0.035,
+      "width": 0.52,
+      "height": 0.91
+    },
+    "spineCrop": {
+      "left": 0.758,
+      "top": 0.035,
+      "width": 0.091,
+      "height": 0.917
+    }
+  },
+  "how-are-you-here": {
+    "image": "books/hey you are here.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.321,
+      "top": 0.031,
+      "width": 0.503,
+      "height": 0.925
+    },
+    "spineCrop": {
+      "left": 0.179,
+      "top": 0.031,
+      "width": 0.102,
+      "height": 0.925
+    }
+  },
+  "the-book-we-lost": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_07_09 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.192,
+      "top": 0.06,
+      "width": 0.449,
+      "height": 0.905
+    },
+    "spineCrop": {
+      "left": 0.692,
+      "top": 0.058,
+      "width": 0.089,
+      "height": 0.91
+    }
+  },
+  "good-company-goes-a-long-way": {
+    "image": "books/good-company-goes-a-long-way.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "coexisting-other-advanced-skills": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_24_31 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.099,
+      "top": 0.127,
+      "width": 0.608,
+      "height": 0.755
+    },
+    "spineCrop": {
+      "left": 0.783,
+      "top": 0.118,
+      "width": 0.124,
+      "height": 0.774
+    }
+  },
+  "the-art-of-doing-absolutely-nothing": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_31_57 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.205,
+      "top": 0.045,
+      "width": 0.419,
+      "height": 0.902
+    },
+    "spineCrop": {
+      "left": 0.728,
+      "top": 0.045,
+      "width": 0.064,
+      "height": 0.902
+    }
+  },
+  "i-need-the-full-context": {
+    "image": "books/i-need-the-full-context.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "waiting-to-hear": {
+    "image": "books/waiting-to-hear.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "the-nolan-update": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_08_36 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.172,
+      "top": 0.039,
+      "width": 0.49,
+      "height": 0.917
+    },
+    "spineCrop": {
+      "left": 0.74,
+      "top": 0.039,
+      "width": 0.076,
+      "height": 0.917
+    }
+  },
+  "live-updates-required": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_10_11 AM.png",
+    "sourceAspect": 1.5,
+    "coverCrop": {
+      "left": 0.132,
+      "top": 0.032,
+      "width": 0.502,
+      "height": 0.914
+    },
+    "spineCrop": {
+      "left": 0.811,
+      "top": 0.045,
+      "width": 0.076,
+      "height": 0.89
+    }
+  },
+  "one-more-follow-up-question": {
+    "image": "books/one-more-follow-up-question.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "47-open-brain-tabs": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_17_26 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.145,
+      "top": 0.045,
+      "width": 0.515,
+      "height": 0.91
+    },
+    "spineCrop": {
+      "left": 0.799,
+      "top": 0.045,
+      "width": 0.064,
+      "height": 0.91
+    }
+  },
+  "as-soon-as-i-m-free": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_55_26 AM.png",
+    "sourceAspect": 1.0,
+    "coverCrop": {
+      "left": 0.105,
+      "top": 0.078,
+      "width": 0.533,
+      "height": 0.827
+    },
+    "spineCrop": {
+      "left": 0.637,
+      "top": 0.078,
+      "width": 0.065,
+      "height": 0.827
+    }
+  },
+  "a-quick-coffee-vol-iv": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_15_46 AM.png",
+    "sourceAspect": 1.5,
+    "coverCrop": {
+      "left": 0.156,
+      "top": 0.049,
+      "width": 0.508,
+      "height": 0.895
+    },
+    "spineCrop": {
+      "left": 0.771,
+      "top": 0.053,
+      "width": 0.072,
+      "height": 0.88
+    }
+  },
+  "tell-me-once-you-re-done": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_11_40 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.174,
+      "top": 0.04,
+      "width": 0.489,
+      "height": 0.907
+    },
+    "spineCrop": {
+      "left": 0.742,
+      "top": 0.036,
+      "width": 0.08,
+      "height": 0.914
+    }
+  },
+  "things-that-reminded-me-of-you": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_46_24 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.197,
+      "top": 0.06,
+      "width": 0.475,
+      "height": 0.884
+    },
+    "spineCrop": {
+      "left": 0.748,
+      "top": 0.055,
+      "width": 0.064,
+      "height": 0.89
+    }
+  },
+  "the-warm-workspace": {
+    "image": "books/the-warm-workspace.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "green-fields-pretty-skies": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_26_40 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.205,
+      "top": 0.045,
+      "width": 0.436,
+      "height": 0.917
+    },
+    "spineCrop": {
+      "left": 0.738,
+      "top": 0.045,
+      "width": 0.062,
+      "height": 0.917
+    }
+  },
+  "a-tint-of-chaos": {
+    "image": "books/2966ccf5-2cef-44eb-b8a9-fd5d53ee3d18.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.166,
+      "top": 0.038,
+      "width": 0.497,
+      "height": 0.914
+    },
+    "spineCrop": {
+      "left": 0.751,
+      "top": 0.04,
+      "width": 0.075,
+      "height": 0.914
+    }
+  },
+  "the-very-long-meeting": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_29_34 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.227,
+      "top": 0.035,
+      "width": 0.41,
+      "height": 0.935
+    },
+    "spineCrop": {
+      "left": 0.731,
+      "top": 0.035,
+      "width": 0.065,
+      "height": 0.935
+    }
+  },
+  "good-company": {
+    "image": "books/good-company.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "later-expanded-edition": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 07_59_35 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.158,
+      "top": 0.045,
+      "width": 0.507,
+      "height": 0.9
+    },
+    "spineCrop": {
+      "left": 0.754,
+      "top": 0.043,
+      "width": 0.084,
+      "height": 0.905
+    }
+  },
+  "how-to-finish-a-conversation": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_34_25 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.163,
+      "top": 0.04,
+      "width": 0.476,
+      "height": 0.913
+    },
+    "spineCrop": {
+      "left": 0.747,
+      "top": 0.04,
+      "width": 0.065,
+      "height": 0.913
+    }
+  },
+  "the-long-version": {
+    "image": "books/the-long-version.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "a-library-of-surprise": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_04_55 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.152,
+      "top": 0.052,
+      "width": 0.515,
+      "height": 0.899
+    },
+    "spineCrop": {
+      "left": 0.74,
+      "top": 0.049,
+      "width": 0.094,
+      "height": 0.905
+    }
+  },
+  "house-arrest-second-edition": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_09_58 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.148,
+      "top": 0.035,
+      "width": 0.52,
+      "height": 0.91
+    },
+    "spineCrop": {
+      "left": 0.758,
+      "top": 0.035,
+      "width": 0.091,
+      "height": 0.917
+    }
+  },
+  "the-full-report": {
+    "image": "books/the-full-report.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "suspiciously-brief": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 09_08_30 AM.png",
+    "sourceAspect": 1.0,
+    "coverCrop": {
+      "left": 0.216,
+      "top": 0.098,
+      "width": 0.61,
+      "height": 0.83
+    },
+    "spineCrop": {
+      "left": 0.134,
+      "top": 0.098,
+      "width": 0.08,
+      "height": 0.83
+    }
+  },
+  "three-to-four-hours": {
+    "image": "books/three-to-four-hours.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "muffy-boy": {
+    "image": "books/muffy-boy.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "still-typing": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_07_30 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.107,
+      "top": 0.04,
+      "width": 0.592,
+      "height": 0.915
+    },
+    "spineCrop": {
+      "left": 0.78,
+      "top": 0.042,
+      "width": 0.102,
+      "height": 0.91
+    }
+  },
+  "the-scenic-route": {
+    "image": "books/the-scenic-route.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "pending-since-forever": {
+    "image": "books/pending-since-forever.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "both-of-us-apparently": {
+    "image": "books/both-of-us-apparently.png",
+    "sourceAspect": null,
+    "coverCrop": null,
+    "spineCrop": null
+  },
+  "random-morning-thought": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 01_21_35 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.162,
+      "top": 0.047,
+      "width": 0.511,
+      "height": 0.9
+    },
+    "spineCrop": {
+      "left": 0.763,
+      "top": 0.05,
+      "width": 0.078,
+      "height": 0.9
+    }
+  },
+  "fully-attentive": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_01_05 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.155,
+      "top": 0.05,
+      "width": 0.518,
+      "height": 0.9
+    },
+    "spineCrop": {
+      "left": 0.748,
+      "top": 0.05,
+      "width": 0.092,
+      "height": 0.9
+    }
+  },
+  "miss-you-too-dude": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_11_57 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.134,
+      "top": 0.035,
+      "width": 0.526,
+      "height": 0.925
+    },
+    "spineCrop": {
+      "left": 0.771,
+      "top": 0.038,
+      "width": 0.085,
+      "height": 0.92
+    }
+  },
+  "highest-compliment": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_37_54 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.175,
+      "top": 0.047,
+      "width": 0.487,
+      "height": 0.9
+    },
+    "spineCrop": {
+      "left": 0.749,
+      "top": 0.049,
+      "width": 0.07,
+      "height": 0.898
+    }
+  },
+  "random-morning-thought-collage-edition": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_39_37 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.095,
+      "top": 0.095,
+      "width": 0.59,
+      "height": 0.8
+    },
+    "spineCrop": {
+      "left": 0.782,
+      "top": 0.09,
+      "width": 0.13,
+      "height": 0.81
+    }
+  },
+  "very-you-coded": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_41_39 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.078,
+      "top": 0.07,
+      "width": 0.645,
+      "height": 0.84
+    },
+    "spineCrop": {
+      "left": 0.79,
+      "top": 0.07,
+      "width": 0.126,
+      "height": 0.84
+    }
+  },
+  "wait-there-s-more": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_43_52 AM.png",
+    "sourceAspect": 1.5,
+    "coverCrop": {
+      "left": 0.277,
+      "top": 0.058,
+      "width": 0.451,
+      "height": 0.84
+    },
+    "spineCrop": {
+      "left": 0.153,
+      "top": 0.058,
+      "width": 0.084,
+      "height": 0.84
+    }
+  },
+  "coexisting-second-edition": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 08_48_39 AM.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.339,
+      "top": 0.035,
+      "width": 0.488,
+      "height": 0.895
+    },
+    "spineCrop": {
+      "left": 0.185,
+      "top": 0.035,
+      "width": 0.092,
+      "height": 0.895
+    }
+  },
+  "10739-things-illustrated-edition": {
+    "image": "books/ChatGPT Image Sep 14, 2026, 09_04_05 AM.png",
+    "sourceAspect": 1.0,
+    "coverCrop": {
+      "left": 0.215,
+      "top": 0.11,
+      "width": 0.633,
+      "height": 0.815
+    },
+    "spineCrop": {
+      "left": 0.06,
+      "top": 0.11,
+      "width": 0.098,
+      "height": 0.815
+    }
+  },
+  "still-typing-night-edition": {
+    "image": "books/9d6227ad-fa9e-41ac-91e0-fcd59f36efc3.png",
+    "sourceAspect": 1.3333333333333333,
+    "coverCrop": {
+      "left": 0.207,
+      "top": 0.045,
+      "width": 0.476,
+      "height": 0.9
+    },
+    "spineCrop": {
+      "left": 0.713,
+      "top": 0.04,
+      "width": 0.091,
+      "height": 0.91
+    }
+  }
+}

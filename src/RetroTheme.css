@@ -1,0 +1,159 @@
+/* Shared print palette. Individual rooms retain their own layout and mechanics. */
+:root { --retro-ink: #19221e; --retro-cream: #fff8e8; --retro-yellow: #ffcf24; --retro-mint: #63f5ca; --retro-pink: #ff5b91; --retro-purple: #ad8cf5; --retro-red: #ef4928; }
+body { background: #102b25; }
+::selection { background: #ff5b91; color: #19221e; }
+.archive-world { --archive-red: #b72e4c; --world-line: #19221e66; }
+.archive-world::before { background-image: var(--archive-grain), radial-gradient(#19221e1a .7px, transparent 1px); background-size: auto, 5px 5px; }
+.archive-world .archive-signature { font-weight: 600; }
+.archive-world .artifact-heading h1 { font-family: var(--font-body); font-weight: 900; letter-spacing: -.065em; }
+.archive-world .artifact-kicker { font-size: 10px; }
+.archive-world .archive-content button[class*="bg-brass/10"], .archive-world .archive-content button[class*="bg-star/10"] { border: 2px solid #19221e; background: #ffcf24; color: #19221e; border-radius: 4px; box-shadow: 4px 4px 0 #19221e; font-weight: 700; }
+.archive-world .archive-content button[class*="bg-brass/10"]:enabled:hover, .archive-world .archive-content button[class*="bg-star/10"]:enabled:hover { background: #ffe47c; }
+.archive-world .archive-content .focus-ring:focus-visible { outline: 3px solid #b62d66; outline-offset: 3px; }
+.archive-world .archive-content button[class*="bg-brass/25"] { background: #19221e; color: #fff8e8; border-color: #19221e; }
+
+/* The briefing is a bright, perforated two-person ticket. */
+.archive-world.world-intro { --world-text: #19221e; --world-muted: #494735; background: #ffcf24; }
+.world-intro .archive-content { border: 3px solid #19221e; border-left: 12px solid #ff5b91; background: #fff8e8; box-shadow: 12px 12px 0 #19221e; border-radius: 3px; }
+.world-intro .archive-content::before { content: "ADMIT TWO / PERSONAL ARCHIVE / 2711"; border-bottom: 2px dashed #19221e; padding-bottom: 22px; color: #a22d47; }
+.world-intro .archive-content::after { content: "NO EXPIRY. GOOD COMPANY ONLY. ✳"; font: 9px var(--font-type); letter-spacing: .1em; color: #6b5540; border-top: 2px dashed #19221e; padding-top: 25px; width: 100%; }
+
+/* Lavender desk, cream examination sheet and a loud yellow answer button. */
+.archive-world.world-piece1 { --world-text: #19221e; --world-muted: #3e354a; background: #b69bf3; }
+.world-piece1 .artifact-heading { color: #19221e; }
+.world-piece1 .artifact-heading p { color: #3e354a; }
+.world-piece1 .exam-paper { background-color: #fff8e8; border: 3px solid #19221e; border-top: 14px solid #ffcf24; box-shadow: 8px 8px 0 #19221e; border-radius: 3px; }
+.world-piece1 .exam-paper button { border: 2px solid #19221e; border-radius: 4px; background: #fffdf5; box-shadow: 2px 2px 0 #19221e; }
+.world-piece1 .exam-paper button:hover:enabled { background: #fff0ad; }
+.world-piece1 .exam-paper button[class*="bg-moss"] { background: #63f5ca; }
+.world-piece1 .exam-paper button[class*="bg-evidence"] { background: #ffbed3; }
+.world-piece1 .archive-content > div:last-child:not(.exam-paper) p { color: #19221e; }
+
+/* Video-store memories: hand-lettered, colourful cassette sleeves. */
+.archive-world.world-piece2 { --world-text: #fff8e8; --world-muted: #c9e6d8; background: #123c33; }
+.world-piece2 .artifact-heading { border-bottom: 2px solid #63f5ca; }
+.world-piece2 .artifact-heading h1 { color: #63f5ca; }
+.world-piece2 .tape-shelves { gap: 24px; }
+.world-piece2 .tape-shelves > button { border: 3px solid #19221e; border-left: 16px solid #19221e; border-radius: 4px; background: #ff5b91; color: #19221e; box-shadow: 7px 7px 0 #000; min-height: 260px; }
+.world-piece2 .tape-shelves > button:nth-child(2) { background: #ffcf24; border-left-color: #19221e; }
+.world-piece2 .tape-shelves > button > span, .world-piece2 .tape-shelves > button > span:nth-child(2) { color: #19221e; }
+.world-piece2 .tape-shelves > button > span:nth-child(2) { font-family: var(--font-body); font-weight: 900; letter-spacing: -.065em; font-style: normal; }
+.world-piece2 .tape-shelves > button::after { color: #19221e; border-top: 2px solid #19221e; padding-top: 12px; width: 100%; }
+.world-piece2 .tape-shelves > button div span { background: #fff8e8; color: #19221e; border: 1px solid #19221e; border-radius: 2px; }
+.world-piece2 .tape-clues button { background: #fff8e8 !important; border: 2px solid #19221e; box-shadow: 3px 3px 0 #000; border-radius: 3px; }
+.world-piece2 .tape-clues button[aria-pressed="true"] { background: #63f5ca !important; color: #19221e !important; }
+
+/* Newspaper puzzle with the colour and framing of a local event poster. */
+.archive-world.world-piece3 { --world-text: #19221e; --world-muted: #514638; --world-surface: #fff8e8; background: #ef4928; }
+.world-piece3 .archive-signature, .world-piece3 .archive-signature > span:first-child { color: #fff2c9; }
+.world-piece3 .archive-content { padding: 28px; border: 3px solid #19221e; background: #fff8e8; box-shadow: 9px 9px 0 #19221e; }
+.world-piece3 .newspaper-masthead { background: #ffcf24; border-top: 4px solid #19221e; padding: 18px 14px 12px; }
+.world-piece3 .newspaper-masthead h1 { color: #a82b27; font-size: clamp(35px, 6vw, 69px); }
+.world-piece3 .newspaper-grid { gap: 5px; border: none; }
+.world-piece3 .newspaper-grid button { border: 2px solid #19221e; background: #f5edd8; border-radius: 3px; box-shadow: 2px 2px 0 #19221e; font-weight: 700; }
+.world-piece3 .newspaper-grid button:hover { background: #fbe38b; }
+.world-piece3 .newspaper-grid button[aria-pressed="true"] { background: #b79df3; color: #19221e; box-shadow: inset 0 0 0 2px #8e6acc; }
+.world-piece3 .newspaper-solved { background: #123c33; border: 2px solid #19221e; border-radius: 3px; }
+.world-piece3 .newspaper-solved:nth-child(even) { background: #93294a; }
+.world-piece3 .newspaper-sidebar { background: #ffcf24; padding: 16px 13px; border: 2px solid #19221e; box-shadow: 4px 4px 0 #19221e; transform: rotate(2deg); }
+
+/* House Arrest becomes a toy-like door console and a shelf of keepsakes. */
+.archive-world.world-piece4 { --world-text: #19221e; --world-muted: #3a354d; --world-surface: #fff8e8; background: #65dfc2; }
+.world-piece4 .archive-content { border: 4px solid #19221e; border-bottom-width: 13px; border-radius: 15px; background: #ad8cf5; box-shadow: 9px 9px 0 #19221e; }
+.world-piece4 .archive-content [class*="text-evidence"] { color: #812743; }
+.world-piece4 .room-objects { gap: 10px; padding-bottom: 18px; border-bottom: 3px solid #19221e; }
+.world-piece4 .room-objects button { background: #fff8e8 !important; border: 2px solid #19221e; box-shadow: 3px 3px 0 #19221e; border-radius: 6px; }
+.world-piece4 .room-objects button:nth-child(3n + 1) { background: #ffcf24 !important; }
+.world-piece4 .room-objects button:nth-child(3n + 2) { background: #ffb7d0 !important; }
+.world-piece4 .door-keypad { border: 3px solid #19221e; background: #fff8e8; box-shadow: 5px 5px 0 #19221e; }
+.world-piece4 .door-keypad button { color: #fff8e8; background: #19221e; border: 2px solid #19221e; box-shadow: 0 4px 0 #625775; }
+.world-piece4 .door-keypad button[class*="bg-brass/40"] { background: #ff5b91; color: #19221e; box-shadow: 0 0 20px #ff5b9199; }
+
+/* Later: a pop-art messenger and an arcade overload meter. */
+.archive-world.world-piece5 { background: #302443; --world-text: #fff8e8; --world-muted: #e0cdeb; }
+.world-piece5 .later-heading .artifact-kicker { color: #d3bdeb; }
+.world-piece5 .later-heading h1 { color: #ffcf24; font-family: var(--font-body); font-weight: 900; letter-spacing: -.065em; }
+.world-piece5 .later-heading h1 em { color: #ff85b1; font-family: var(--font-display); }
+.world-piece5 .later-heading > p { color: #e1d3e8; }
+.world-piece5 .later-chat { border: 3px solid #19221e; box-shadow: 8px 8px 0 #111813; }
+.world-piece5 .later-chat-header { background: #63f5ca; color: #19221e; border-bottom: 3px solid #19221e; }
+.world-piece5 .later-chat-header div > span { color: #285a48; }
+.world-piece5 .later-avatar { background: #ffcf24; border: 2px solid #19221e; color: #19221e; }
+.world-piece5 .later-chat-log { background-color: #fff8e8; }
+.world-piece5 .later-bubble { border: 1px solid #19221e; box-shadow: 2px 2px 0 #19221e26; }
+.world-piece5 .later-outgoing { background: #b8f5d2; }
+.world-piece5 .later-compose { border-top: 2px solid #19221e; color: #585e4d; }
+.world-piece5 .later-pressure { padding: 25px; background: #ad8cf5; border: 3px solid #19221e; box-shadow: 7px 7px 0 #111813; border-radius: 8px; }
+.world-piece5 .later-meter-label, .world-piece5 .later-meter-label span:last-child { color: #19221e; }
+.world-piece5 .later-capacity-number { color: #19221e; font-family: var(--font-body); font-weight: 900; letter-spacing: -.07em; }
+.world-piece5 .later-capacity-number > span { color: #493753; }
+.world-piece5 .later-meter { background: #fff8e8; border: 3px solid #19221e; box-shadow: 3px 3px 0 #19221e; height: 28px; }
+.world-piece5 .later-meter-fill { background: repeating-linear-gradient(90deg, transparent 0 15px, #19221e 15px 18px), linear-gradient(90deg, #63f5ca, #ffcf24 60%, #ff4c82); }
+.world-piece5 .later-meter-caption, .world-piece5 .later-warning, .world-piece5 .later-overload > p, .world-piece5 .later-choice-response { color: #33233e; }
+.world-piece5 .later-overload h2 { color: #7e163e; font-family: var(--font-body); font-weight: 900; letter-spacing: -.05em; }
+.world-piece5 .later-options button { background: #fff8e8; color: #19221e; border: 2px solid #19221e; box-shadow: 3px 3px 0 #19221e; border-radius: 3px; }
+.world-piece5 .later-options button[aria-pressed="true"], .world-piece5 .later-options button:enabled:hover { background: #ffcf24; }
+.world-piece5 .later-continue { background: #63f5ca; color: #19221e; border: 2px solid #19221e; box-shadow: 4px 4px 0 #19221e; border-radius: 3px; }
+.world-piece5 .later-burst > span { background: #ff5b91; }
+.world-piece5 .later-burst > span:nth-child(odd) { background: #ffcf24; }
+.world-piece5 .later-shockwave { border-color: #ffcf24; }
+
+/* The quiet level keeps its open frame, now at a candy-coloured dusk. */
+.archive-world.world-piece6 { background: linear-gradient(#352344 0%, #76445c 45%, #ed8b67 70%, #1d3532 71%); }
+.world-piece6 .artifact-heading h1 { color: #ffcf24; }
+.world-piece6 .artifact-kicker { color: #ffc9d6; }
+.world-piece6 .cinema-quotes p { color: #ffeed5; }
+.world-piece6 .cinema-road { background: linear-gradient(transparent 0 58%, #14372f 58%); }
+.world-piece6 .cinema-chair { border-color: #63f5ca; }
+.world-piece6 .cinema-chair::before { border-color: #63f5ca; }
+.world-piece6 .cinema-car::before { background: #ffcf24; box-shadow: 8px 0 12px #ffcf2477; }
+.world-piece6 .cinema-battery { color: #ffecce; }
+.world-piece6 .archive-content [class*="bg-star/60"] { background: #ff5b91; }
+
+/* Checkpoint-style jigsaw table. The completion glow and wipe stay intact. */
+.archive-world.world-final-puzzle.explorer-world { background: #102b25; }
+.explorer-world .explorer-heading h1 { color: #63f5ca; font-family: var(--font-body); font-weight: 900; letter-spacing: -.06em; }
+.explorer-world .explorer-heading span, .explorer-world .explorer-heading p { color: #c2e2ce; }
+.explorer-world .explorer-player { border: 3px solid #63f5ca; box-shadow: 7px 7px 0 #050f0b; border-radius: 6px; }
+.explorer-world .explorer-toolbar { background: #63f5ca; color: #19221e; border-bottom: 3px solid #19221e; }
+.explorer-world .explorer-toolbar button, .explorer-world .explorer-count { color: #19221e; }
+.explorer-world .explorer-toolbar button:hover:not(:disabled), .explorer-world .explorer-toolbar button[aria-pressed="true"] { background: #ffcf24; border-color: #19221e; }
+.explorer-world .explorer-table { background-color: #254b40; }
+.explorer-world .explorer-status { background: #0b211a; color: #b9ecd6; }
+.explorer-world .explorer-reference { border-color: #ffcf24; background: #ffcf24; box-shadow: 5px 5px 0 #19221e; }
+.explorer-world .explorer-win { background: #102b25; border: 2px solid #ffcf24; box-shadow: 4px 4px 0 #050f0b; color: #ffcf24; }
+.explorer-world .explorer-win button { background: #ff5b91; color: #19221e; border: 2px solid #19221e; font-weight: 700; }
+.explorer-world .explorer-player:fullscreen { border: 0; box-shadow: none; }
+
+/* The ending stays intimate, with a warm poster glow and a wax-pink seal. */
+.archive-world.world-final-room { background: radial-gradient(ellipse 65% 30% at 50% 85%, #f1744540, transparent), #30213b; }
+.world-final-room .final-message p { color: #fff1d6; }
+.world-final-room::after { background: linear-gradient(90deg, transparent, #ffaf9d88, transparent); }
+.world-final-room .gift-envelope { background: linear-gradient(32deg, transparent 49%, #ad782c66 50%, transparent 51%), linear-gradient(-32deg, #ffcf24 49%, #19221e 50%, #ffe484 51%); border: 2px solid #19221e; box-shadow: 5px 5px 0 #140e1b; }
+.world-final-room .gift-envelope::after { background: #ff5b91; color: #19221e; border: 2px solid #19221e; }
+.world-final-room .gift-card { background: #fff8e8; border: 3px solid #19221e; box-shadow: 7px 7px 0 #140e1b; border-radius: 3px; --world-text: #19221e; --world-muted: #494336; }
+.world-final-room .gift-card button { background: #ffcf24; border: 2px solid #19221e; box-shadow: 3px 3px 0 #19221e; color: #19221e; }
+.archive-world.world-complete { background: #ffcf24; --world-text: #19221e; --world-muted: #483d27; }
+.world-complete .archive-endmark { font-family: var(--font-body); font-weight: 900; letter-spacing: -.075em; }
+.world-complete .archive-endmark em { color: #a52663; font-family: var(--font-display); font-weight: 500; }
+.world-complete .archive-endnote { background: #fff8e8; border: 2px solid #19221e; box-shadow: 4px 4px 0 #19221e; padding: 12px; color: #19221e; transform: rotate(-3deg); }
+.archive-world .scrapbook-found { background: #63f5ca; border: 3px solid #19221e; box-shadow: 8px 8px 0 #19221e; border-radius: 5px; }
+.archive-world .scrapbook-found [class*="text-brass"] { color: #19221e; }
+.archive-world .scrapbook-dialog { background: #fff8e8; border: 2px solid #19221e; box-shadow: 5px 5px 0 #19221e; border-radius: 3px; }
+.archive-world .scrapbook-dialog > div:first-child { background: #ffcf24; border-bottom: 2px solid #19221e; }
+.archive-world .scrapbook-dialog > div:first-child span, .archive-world .scrapbook-dialog > div:first-child button { color: #19221e; }
+@media (max-width: 700px) {
+  .world-piece3 .archive-content { padding: 17px 12px; box-shadow: 5px 5px 0 #19221e; }
+  .world-piece3 .newspaper-masthead { padding: 12px 5px; margin-top: 0; }
+  .world-piece3 .newspaper-masthead h1 { font-size: 35px; }
+  .world-piece3 .newspaper-grid { gap: 4px; }
+  .world-piece3 .newspaper-grid button { font-size: 8px; padding-inline: 3px; }
+  .world-piece3 .newspaper-sidebar { transform: none; }
+  .world-piece2 .tape-shelves { gap: 14px; }
+  .world-piece2 .tape-shelves > button { border-left-width: 8px; min-height: 230px; }
+  .world-piece4 .archive-content { border-width: 3px; padding: 22px 14px; }
+  .world-piece4 .room-objects { gap: 7px; }
+  .world-piece5 .later-pressure { padding: 18px; }
+  .world-piece5 .later-overload h2 { font-size: 29px; }
+  .world-complete .archive-endnote { font-size: 8px; letter-spacing: .1em; }
+}

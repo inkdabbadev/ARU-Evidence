@@ -1,0 +1,124 @@
+.landing-page {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 100svh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 24px 65px;
+  background: #b9b09c;
+  color: #24221e;
+  font-family: var(--font-type);
+}
+.landing-wall, .landing-light {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+.landing-wall {
+  opacity: .42;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeDiffuseLighting surfaceScale='2' diffuseConstant='.8' lighting-color='%23fff6df'%3E%3CfeDistantLight azimuth='45' elevation='55'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+.landing-light { z-index: 2; mix-blend-mode: multiply; }
+.landing-content { width: min(780px, 68vw); text-align: center; }
+.landing-case {
+  display: inline-block;
+  padding: 9px 18px 7px;
+  border: 1px solid #b42822;
+  color: #bd201a;
+  font-size: clamp(16px, 1.6vw, 23px);
+  transform: rotate(-6deg);
+  margin-bottom: 18px;
+}
+.landing-logo { margin: 0; }
+.landing-logo img { display: block; width: 100%; height: auto; }
+.landing-unresolved {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 12px;
+  margin: 6px 0 16px;
+  font-size: clamp(15px, 1.8vw, 24px);
+}
+.landing-unresolved strong { color: #b8211c; font-size: 1.35em; border-bottom: 3px solid; }
+.landing-unresolved span { border-bottom: 1px solid #a34336; padding-bottom: 6px; }
+.landing-status { font-size: 14px; line-height: 1.8; margin: 0 0 38px; }
+.landing-status mark {
+  display: inline-block;
+  color: inherit;
+  background: #ead49a;
+  padding: 0 12px;
+  font: italic clamp(20px, 2vw, 27px) var(--font-display);
+  clip-path: polygon(2% 8%, 98% 0, 100% 80%, 96% 96%, 0 100%, 1% 40%);
+}
+.landing-begin {
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 34px;
+  background: #22211e;
+  color: #f3ead7;
+  border: 1px solid #e5dcc8;
+  outline: 2px solid #36332c;
+  outline-offset: 3px;
+  font-size: clamp(14px, 1.4vw, 19px);
+  transition: background .2s, transform .2s;
+}
+.landing-begin:hover { background: #39352b; transform: translateY(-2px); }
+.landing-begin:active { transform: translateY(1px); }
+.landing-begin span { font-size: 28px; line-height: 1; }
+.landing-promise { font-size: 11px; margin: 17px 0 0; }
+.landing-scribble {
+  position: absolute;
+  font: italic 23px/1.35 var(--font-display);
+  opacity: .76;
+  transform: rotate(-10deg);
+  pointer-events: none;
+}
+.landing-scribble-left { left: 6%; top: 42%; }
+.landing-scribble-right { right: 9%; top: 20%; }
+.landing-scribble-bottom { right: 7%; bottom: 7%; font-size: 19px; }
+.landing-lamp-anchor { position: absolute; top: -40px; left: 50%; width: 170px; margin-left: -85px; pointer-events: none; }
+.landing-lamp { height: 115px; transform-origin: 50% 0; position: relative; }
+.landing-lamp-cord { position: absolute; top: 0; left: calc(50% - 2px); height: 45px; width: 4px; background: #181817; }
+.landing-lamp-shade {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  height: 88px;
+  border-radius: 50% 50% 8% 8% / 100% 100% 7% 7%;
+  background: linear-gradient(110deg, #292923, #101111 65%, #22221e);
+  box-shadow: inset 5px 0 12px #ffffff09;
+}
+.landing-lamp-bulb {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 19px;
+  border-radius: 50%;
+  background: #fff9e8;
+  box-shadow: 0 2px 8px #fff4d6, 0 9px 19px 2px #fff5d64d;
+}
+@media (min-width: 1500px) { .landing-content { width: min(850px, 60vw); } }
+@media (max-width: 1000px) {
+  .landing-scribble { font-size: 18px; }
+  .landing-scribble-left { left: 3%; }
+  .landing-scribble-right { right: 4%; }
+}
+@media (max-width: 700px) {
+  .landing-page { padding: 130px 20px 65px; }
+  .landing-content { width: 100%; max-width: 540px; }
+  .landing-scribble { display: none; }
+  .landing-case { margin-bottom: 25px; }
+  .landing-unresolved { flex-wrap: wrap; gap: 4px 8px; margin-top: 20px; }
+  .landing-status { margin-bottom: 32px; }
+  .landing-begin { padding: 17px 20px; }
+  .landing-lamp-anchor { width: 135px; margin-left: -67.5px; }
+}
+
+.landing-beam {position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;mix-blend-mode:screen}
+.landing-lamp {transform-origin:50% 100%}
