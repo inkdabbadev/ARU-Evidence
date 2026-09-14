@@ -54,6 +54,20 @@ test('refresh keeps identity and excludes closed time; later return creates new 
 test('batch RPC drains acknowledged events', async () => {
   const e=environment();e.tracker.startTracking('piece2');e.tracker.trackEvent('book_open',{book:'house-arrest'});await e.flush();assert.equal(e.calls.length,1);assert.equal(e.calls[0][0],'record_journey');assert.equal(e.state().queue.length,0);
 });
+
+test('reopening a completed experience creates a new analytics visit', () => {
+  const e=environment();
+  const stop=e.tracker.startTracking('intro');
+  e.tracker.enterStation('complete');
+  const completedId=e.state().id;
+  assert.equal(e.state().snapshot.completed,true);
+  stop();
+  e.tracker.startTracking('intro');
+  assert.notEqual(e.state().id,completedId);
+  assert.equal(e.state().snapshot.completed,false);
+  assert.equal(e.state().snapshot.current_station,'intro');
+  assert.equal(e.state().snapshot.active_ms,0);
+});
 test('stale active reports disconnect and abandonment waits for expiry', () => {
   const e=environment();const now=Date.now();const journey={ended_at:null,last_seen_at:new Date(now-100_000).toISOString(),snapshot:{state:'active',current_station:'piece2',completed:false,stations:{piece2:{visits:1,completed:false}}}};
   assert.equal(e.model.connectionState(journey,now),'disconnected');assert.equal(e.model.stationState(journey,'piece2',now),'CURRENT');assert.equal(e.model.stationState(journey,'piece2',now+30*60_000),'ABANDONED');journey.snapshot.stations.piece2.completed=true;journey.snapshot.completed=true;assert.equal(e.model.stationState(journey,'piece2',now+30*60_000),'COMPLETED');

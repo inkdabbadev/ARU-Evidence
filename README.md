@@ -12,7 +12,9 @@ See **DEPLOY_VERCEL.md**. Vercel configuration and the dependency lockfile are i
 
 ## Progress and admin
 
-Each exhibit awards its own evidence piece once. Progress persists in the current browser. The visitor menu offers Start over. Test navigation is removed.
+Each exhibit awards its own evidence piece once. Unfinished progress persists in the current browser. Reopening or refreshing a completed visit starts a new case and clears the saved jigsaw. The visitor menu offers Start over, which also resets the music player.
+
+The playlist starts with Baby Shark and attempts playback 20 seconds after the experience opens. If the browser blocks automatic audio, use the player's Play button. Manual playback controls override the scheduled start.
 
 Open `/admin` directly. A clearly labeled fictional dashboard preview is available before configuration. Real private analytics require the Supabase setup in **ANALYTICS_SETUP.md**.
 

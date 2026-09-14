@@ -39,6 +39,11 @@ function loadState(): GameStateShape {
     if (!raw) return defaultState;
     const parsed = JSON.parse(raw);
     if (!ROOM_ORDER.includes(parsed.room)) return defaultState;
+    if (parsed.room === "complete") {
+      window.localStorage.removeItem(STORAGE_KEY);
+      window.localStorage.removeItem(JIGSAW_STORAGE_KEY);
+      return defaultState;
+    }
     const collectedPieces = normalizeEvidence(parsed.collectedPieces);
     return { ...defaultState, ...parsed, collectedPieces, piecesFound: collectedPieces.length };
   } catch {
@@ -50,6 +55,7 @@ const GameContext = createContext<GameContextValue | null>(null);
 
 export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, setState] = useState<GameStateShape>(loadState);
+  const [restartCount, setRestartCount] = useState(0);
   const [collectionNotice,setCollectionNotice] = useState<{id:number;sequence:number}|null>(null);
 
   useEffect(() => {
@@ -85,6 +91,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const restart = useCallback(() => {
     setState(defaultState);
     setCollectionNotice(null);
+    setRestartCount(count => count + 1);
     try {
       window.localStorage.removeItem(STORAGE_KEY);
       window.localStorage.removeItem(JIGSAW_STORAGE_KEY);
@@ -102,7 +109,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     [state, collectionNotice, goTo, next, addPiece, toggleSound, restart, setFinalRoomIndex]
   );
 
-  return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
+  return <GameContext.Provider value={value}><React.Fragment key={restartCount}>{children}</React.Fragment></GameContext.Provider>;
 };
 
 export function useGame(): GameContextValue {

@@ -28,6 +28,14 @@ The `news_feed` policies in Supabase's anonymous-auth documentation are an examp
 
 ## Access and data
 
+### CAPTCHA setup
+
+The current admin login and anonymous visitor signup do not include a CAPTCHA widget or send `captchaToken`. If CAPTCHA protection is enabled in Supabase, Auth rejects these requests with `captcha_failed` (missing CAPTCHA token), before checking the admin password. Changing the admin allowlist does not resolve this error.
+
+To use the current forms, turn off **Enable CAPTCHA protection** under Authentication > Attack Protection (called Bot and Abuse Protection in some dashboard versions), then save. This removes the CAPTCHA challenge for the project's Auth endpoints. To keep CAPTCHA protection enabled, first integrate the configured hCaptcha or Cloudflare Turnstile provider using its public site key and pass a verified token to both password login and anonymous signup. Keep the provider's secret key in Supabase, never in frontend environment variables. See [Supabase CAPTCHA setup](https://supabase.com/docs/guides/auth/auth-captcha).
+
+After resolving CAPTCHA, sign in again. If the next error is `email_not_confirmed`, confirm the admin email; if it is `invalid_credentials`, check or reset the account's password in the same project's Authentication settings. A successful login followed by **Access not granted** means the account still needs the journey admin allowlist entry.
+
 Supabase Auth authenticates the admin; database row-level security checks the private admin allowlist on every read, including Realtime. The login shell and compiled code are public static files, but journey data is never embedded in them. Non-admin accounts cannot read sessions/events. Visitor and admin Auth sessions use separate storage keys. The visitor RPC requires an anonymous JWT and binds each session to that anonymous user; it cannot overwrite another visitor's session.
 
 Sessions/events use server timestamps. First/last book open and puzzle timestamps in snapshots are approximate client times. Dwell is measured locally and split at the 60-second inactivity threshold; background/blur time is idle. Closed-browser time is excluded. Heartbeats every 30 seconds and important events batched for 600ms publish snapshots. A dashboard received-time label makes stale data explicit; displayed time is reported time, not invented live engagement. Browser close reporting is best effort; heartbeat expiry is authoritative for offline status. Temporary idle/disconnection does not immediately imply abandonment. A return within 30 minutes reuses the local session; later returns create a new one. Multiple tabs use a short localStorage reporting lease to avoid ordinary double counting. Browsers without localStorage cannot persist visits reliably.

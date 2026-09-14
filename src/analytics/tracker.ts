@@ -23,7 +23,7 @@ function ownLease() {
 }
 function initialise() {
   const previous = read();
-  saved = previous && Date.now() - previous.touched < SESSION_EXPIRY_MS ? previous : {
+  saved = previous && !previous.snapshot.completed && Date.now() - previous.touched < SESSION_EXPIRY_MS ? previous : {
     id: crypto.randomUUID(), touched: Date.now(), queue: [], snapshot: {
       current_station: null, previous_station: null, active_ms: 0, idle_ms: 0, state: 'active',
       device: innerWidth < 768 ? 'mobile' : innerWidth < 1024 ? 'tablet' : 'desktop',

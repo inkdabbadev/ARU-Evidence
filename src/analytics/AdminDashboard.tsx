@@ -46,9 +46,26 @@ export default function AdminDashboard() {
   async function login(e: FormEvent<HTMLFormElement>) {
     e.preventDefault(); setBusy(true); setError('');
     const data = new FormData(e.currentTarget);
-    const {error} = await adminClient!.auth.signInWithPassword({email: String(data.get('email')), password: String(data.get('password'))});
-    if (error) setError('Sign-in failed. Check your credentials and connection.');
-    setBusy(false);
+    try {
+      const {error} = await adminClient!.auth.signInWithPassword({email: String(data.get('email')).trim(), password: String(data.get('password'))});
+      if (error) {
+        if (error.code === 'captcha_failed') {
+          setError('Sign-in is blocked by CAPTCHA protection. This login form needs a CAPTCHA challenge before you can sign in. See the CAPTCHA setup in ANALYTICS_SETUP.md.');
+        } else if (error.code === 'email_not_confirmed') {
+          setError('Confirm your email address before signing in.');
+        } else if (error.code === 'invalid_credentials') {
+          setError('Supabase did not accept this email and password. Check the account in Authentication > Users for the connected project.');
+        } else if (error.status === 429) {
+          setError('Too many sign-in attempts. Wait a few minutes and try again.');
+        } else {
+          setError('Sign-in is unavailable. Check your connection and the Supabase authentication settings.');
+        }
+      }
+    } catch {
+      setError('Could not reach the sign-in service. Check your connection and try again.');
+    } finally {
+      setBusy(false);
+    }
   }
   return <main className="journey-admin">
     <header className="admin-header"><div><span>CASE #2711 / PRIVATE CONTROL ROOM</span><h1>Live journey</h1></div>{session && <button onClick={() => void adminClient?.auth.signOut()}>Sign out</button>}</header>
