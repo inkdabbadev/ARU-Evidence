@@ -12,7 +12,7 @@ import { JIGSAW_STORAGE_KEY } from "../state/storageKeys";
 import { useSound } from "../hooks/useSound";
 import "./FinalPuzzle.css";
 
-const ART = import.meta.env.BASE_URL + "time-together.svg";
+const ART = import.meta.env.BASE_URL + "image.png";
 const PIECES = makePieces();
 type Saved = { groups: PieceGroup[]; elapsed: number; size: TableSize };
 type Drag = { id: number; start: Point; original: PieceGroup; moved: boolean };
