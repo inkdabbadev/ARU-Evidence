@@ -5,7 +5,7 @@ The site remains usable with no Supabase configuration. `/admin` displays setup 
 ## Connect later
 
 1. Create a Supabase project. Run `supabase/migrations/202609140001_journey.sql` in its SQL editor (once), then `supabase/migrations/202609140002_journey_validation.sql`. If the tables already exist from the original migration, run **only the second migration**. Alternatively, apply pending migrations through the Supabase CLI migrations workflow. The second migration preserves existing data and replaces the visitor RPC with stricter validation.
-2. Under Authentication, enable **anonymous sign-ins** for visitors. Create your admin user using the Supabase dashboard with an email and strong password. Disable public email sign-ups if you do not need them.
+2. Under Authentication > Sign In / Providers, enable **Allow anonymous sign-ins**, keep **Allow new users to sign up** enabled, and click **Save changes**. Create your admin user using the Supabase dashboard with an email and strong password.
 3. Copy that admin user's UUID from Authentication > Users. Run `insert into public.journey_admins(user_id) values ('ADMIN-USER-UUID');` in the SQL editor. No browser account can add itself to this allowlist.
 4. Copy `.env.example` to `.env.local`, fill the project URL and **publishable** key, and restart Vite. Add those same two environment variables to Vercel and redeploy for production. Never use a service-role or secret key in a `VITE_` variable.
 5. Open `/admin` and sign in. Open the microsite in a separate browser/private window and navigate, open a book, and attempt a puzzle. Confirm the route/feed update. Leave the visitor untouched for 60 seconds (Idle); close it and wait up to 90 seconds (Disconnected). After 30 minutes without a report, its unfinished current station becomes Abandoned.
@@ -21,6 +21,10 @@ on conflict (user_id) do nothing;
 ```
 
 Do not substitute a visitor's anonymous user UUID. After login, the dashboard should show **Realtime connected**; it also polls every 30 seconds while reconnecting. A successful public readiness check does not prove that the admin allowlist or Realtime publication is configured.
+
+For the admin UUID supplied for this project, run `supabase/setup/journey_admin.sql` in the SQL editor. It adds `d250eafd-540f-40be-be0b-e24fd860a3b3` to the allowlist and checks that the row exists. This project-specific setup is separate from reusable migrations. The account must already exist in Authentication > Users in the same Supabase project.
+
+The `news_feed` policies in Supabase's anonymous-auth documentation are an example for a different table; they are not part of this app's setup. Keep the journey tables' existing admin-only SELECT policies. A SELECT policy with `using (true)` for `authenticated` would also grant anonymous visitors read access to journey data.
 
 ## Access and data
 
